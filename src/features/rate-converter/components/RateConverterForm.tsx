@@ -60,7 +60,7 @@ export const RateConverterForm = ({ onSubmit, isPending }: Props) => {
         value: Number(values.initial_rate.value),
         period:
           values.initial_rate.type === "EFECTIVA_ANUAL"
-            ? null
+            ? "ANUAL"
             : values.initial_rate.period,
       },
     };
