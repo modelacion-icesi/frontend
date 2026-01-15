@@ -41,11 +41,41 @@ export const GeometricAmortizationForm = ({ onSubmit, isPending }: Props) => {
   });
 
   const handleSubmit = (values: FormValues) => {
+    const VP = Number(values.VP);
+    const i = Number(values.i);
+    const nper = Number(values.nper);
+    const g = Number(values.g);
+
+    // Validaciones
+    if (VP <= 0) {
+      form.setError("VP", { 
+        type: "manual", 
+        message: "El Valor Presente debe ser mayor a 0" 
+      });
+      return;
+    }
+
+    if (nper <= 0) {
+      form.setError("nper", { 
+        type: "manual", 
+        message: "El número de períodos debe ser mayor a 0" 
+      });
+      return;
+    }
+
+    if (i < 0) {
+      form.setError("i", { 
+        type: "manual", 
+        message: "La tasa de interés no puede ser negativa" 
+      });
+      return;
+    }
+
     const numericValues: GeometricAmortizationRequest = {
-      VP: Number(values.VP),
-      i: Number(values.i),
-      nper: Number(values.nper),
-      g: Number(values.g),
+      VP,
+      i,
+      nper,
+      g,
     };
     onSubmit(numericValues);
   };
