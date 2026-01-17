@@ -168,12 +168,8 @@ export interface LinearGradientAmortizationRow {
     date: string; // "YYYY-MM-DD"
     year: number;
     gradient_series: string | number;
-    // ... La respuesta de ejemplo es un poco ambigua, 
-    // ... pero asumimos que tendrá las columnas estándar.
-    // ... Ajustaremos si es necesario.
-    // payment?: number;
-    // interest?: number;
-    // principal?: number;
+    interest: number | null;
+    principal_payment: number | null;
     balance?: number;
 }
 

@@ -40,6 +40,22 @@ export const linearGradientAmortizationColumns: ColumnDef<RowData>[] = [
     },
   },
   {
+    accessorKey: "interest", 
+    header: "Intereses",
+    cell: ({ row }) => {
+      const value = row.getValue("interest") as number | null;
+      return value !== null ? formatCurrency(value) : "-";
+    },
+  },
+  {
+    accessorKey: "principal_payment",
+    header: "Abono a Capital",
+    cell: ({ row }) => {
+      const value = row.getValue("principal_payment") as number | null;
+      return value !== null ? formatCurrency(value) : "-";
+    }
+  },
+  {
     accessorKey: "balance",
     header: "Saldo",
     cell: ({ row }) => {
