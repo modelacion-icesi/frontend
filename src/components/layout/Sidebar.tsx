@@ -24,28 +24,28 @@ import {
 
 const navLinks = [
   { to: "/", label: "Home", icon: Home },
-  {
-    to: "/amortization/geometric",
-    label: "Geométrica",
-    icon: LineChart,
-  },
-  { to: "/amortization/fixed-rate", label: "Tasa Fija", icon: Calculator },
-  {
-    to: "/amortization/variable-rate",
-    label: "Tasa Variable",
-    icon: BarChart3,
-  },
+  { to: "/rates/convert", label: "Conversor de Tasas", icon: RefreshCw },
+  { to: "/amortization/fixed-rate", label: "Cuota Fija", icon: Calculator },
   {
     to: "/amortization/linear-gradient",
-    label: "Gradiente Lineal",
+    label: "Gradiente Lineal o Aritmético",
     icon: AreaChart,
+  },
+  {
+    to: "/amortization/geometric",
+    label: "Gradiente Geométrico",
+    icon: LineChart,
+  },
+  {
+    to: "/amortization/variable-rate",
+    label: "Cuota Variable",
+    icon: BarChart3,
   },
   {
     to: "/amortization/mixed-rate",
     label: "Tasa Mixta",
     icon: PieChart,
   },
-  { to: "/rates/convert", label: "Conversor de Tasas", icon: RefreshCw },
 ];
 
 interface SidebarProps {

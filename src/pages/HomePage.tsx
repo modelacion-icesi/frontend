@@ -20,41 +20,41 @@ import {
 // 1. Definimos nuestras funcionalidades
 const features = [
   {
-    title: "Amortización Geométrica",
-    description: "Calcula una tabla de amortización con cuota creciente.",
-    icon: LineChart,
-    path: "/amortization/geometric",
+    title: "Conversor de Tasas",
+    description: "Convierte tasas de interés entre diferentes tipos.",
+    icon: RefreshCw,
+    path: "/rates/convert",
   },
   {
-    title: "Amortización Tasa Fija",
+    title: "Cuota Fija",
     description: "Calcula la amortización más común con cuota fija.",
     icon: Calculator,
     path: "/amortization/fixed-rate",
   },
   {
-    title: "Amortización Tasa Variable",
+    title: "Gradiente Lineal o Aritmético",
+    description:
+      "Calcula una tabla de amortización con cuota base y gradiente aritmético.",
+    icon: AreaChart,
+    path: "/amortization/linear-gradient",
+  },
+  {
+    title: "Gradiente Geométrico",
+    description: "Calcula una tabla de amortización con cuota de crecimiento geométrico.",
+    icon: LineChart,
+    path: "/amortization/geometric",
+  },
+  {
+    title: "Cuota Variable",
     description: "Calcula la amortización con cambios de tasa en el tiempo.",
     icon: BarChart3,
     path: "/amortization/variable-rate",
   },
   {
-    title: "Amortización Gradiente Lineal",
-    description:
-      "Calcula una tabla de amortización con cuota base y gradiente.",
-    icon: AreaChart,
-    path: "/amortization/linear-gradient",
-  },
-  {
-    title: "Amortización Tasa Mixta",
+    title: "Tasa Mixta",
     description: "Genera una tabla de amortización con tasa mixta.",
     icon: PieChart,
     path: "/amortization/mixed-rate",
-  },
-  {
-    title: "Conversor de Tasas",
-    description: "Convierte tasas de interés entre diferentes tipos.",
-    icon: RefreshCw,
-    path: "/rates/convert",
   },
 ];
 
